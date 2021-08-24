@@ -1,0 +1,154 @@
+/* Styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --DarkGreen: hsl(154, 59%, 30%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: var(--Red);
+  background-image: url(./images/bg-intro-desktop.png);
+}
+/* Styles */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 90vh;
+}
+
+.container > div {
+  flex: 1;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 50px;
+}
+
+p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.box {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.box-blue {
+  background-color: var(--Blue);
+  padding: 10px;
+  text-align: center;
+}
+.form-control {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.form-control img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+}
+
+.form-control small {
+  text-align: right;
+  opacity: 0;
+  color: var(--Red);
+  font-weight: 600;
+}
+
+.form-control.error input {
+  border-color: var(--Red);
+  color: var(--Red);
+}
+
+.form-control.error img {
+  opacity: 1;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 5px;
+  border: 1px solid var(--GrayishBlue);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+input:focus {
+  border: 1px solid var(--Blue);
+  outline: none;
+}
+
+button {
+  background-color: var(--Green);
+  padding: 18px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+small {
+  display: block;
+  color: var(--GrayishBlue);
+  font-weight: 500;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+small a {
+  color: var(--Red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  h1,
+  p {
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
